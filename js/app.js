@@ -70,3 +70,6 @@ formElement.addEventListener('submit', function(event) {
 
     game.play();
 })
+
+
+document.addEventListener('DOMContentLoaded', game.play);
