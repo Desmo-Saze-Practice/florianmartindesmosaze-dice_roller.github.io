@@ -1,3 +1,3 @@
 # Dice Roller
 
-Today we are crating an app to roll dice.
+Today we are creating an app to roll dice. The aim is to practice events and handlers.
