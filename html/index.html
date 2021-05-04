@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/reset.css">
+    <link href="../css/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Roll</title>
 </head>
 <body>
+    <form action="" id="config">
+        <label for="diceNumber" id="label-dice">
+            Dice number
+            <input type="number" name="diceNumber" id="diceInput" min="1" value="1" max="200">
+            <button id="playButton">Throw dice</button>
+        </label>
+    </form>
     <div id="app">
         <div class="board" id="player"></div>
         <div class="board" id="dealer"></div>

@@ -1,9 +1,10 @@
 const game = {
-    min: 0,
+    min: 1,
     max: 6,
     playerZoneId: 'player',
     dealreZoneId: 'dealer',
-    welcomeMessage: 'How many dice would you like to throw ?',
+    // welcomeMessage: 'How many dice would you like to throw ?',
+    howManyDice: 1,
 
     getRandomNumber: function (min, max) {
         return Math.round(Math.random() * (max - min) + min);
@@ -22,8 +23,8 @@ const game = {
          * PLAYER
          */
         let diceResultPlayer = game.getRandomNumber(game.min, game.max);
-        console.log(diceResultPlayer + 1);
-        const dicePositionPlayer = diceResultPlayer * (-100);
+        console.log(diceResultPlayer);
+        const dicePositionPlayer = (diceResultPlayer-=1) * (-100);
     
         // creat div element
         const dicePlayerElement = document.createElement('div');
@@ -43,15 +44,29 @@ const game = {
         game.resetBoard();
     
         // user defines dice number
-        let howManyDice = parseInt(prompt(game.welcomeMessage));
+        // let howManyDice = parseInt(prompt(game.welcomeMessage));
+        // const diceButtonValue = document.getElementById('diceNumber').value;
+
         
-        for (diceIndex = 0; diceIndex < howManyDice; diceIndex++) {
+        for (diceIndex = 0; diceIndex < game.howManyDice; diceIndex++) {
             game.throwDice(game.playerZoneId);
             game.throwDice(game.dealreZoneId);
         }
-    }
+    },
 }
 
-
 //  start game
-document.addEventListener("DOMcontentLoaded", game.play());
+const formElement = document.getElementById('config');
+
+formElement.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // gets number input value to create equal number of dice
+    diceNUmberElement = document.getElementById('diceInput');
+    game.howManyDice = parseInt(diceNUmberElement.value);
+
+    // let playButtonElement = document.getElementById('playButton');
+    // playButtonElement.addEventListener('click', game.play);
+
+    game.play();
+})
