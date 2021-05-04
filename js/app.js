@@ -4,6 +4,9 @@ let getRandomNumber = function (min, max) {
 }
 
 let diceThrow = function () {
+    /**
+     * PLAYER
+     */
     let diceResultPlayer = getRandomNumber(0, 6);
     console.log(diceResultPlayer + 1);
     const dicePositionPlayer = diceResultPlayer * (-100);
@@ -44,6 +47,8 @@ let diceThrow = function () {
 
 }
 
+
+// set fiel for second player
 const dealerDivElement = document.createElement('div');
 dealerDivElement.className = 'board';
 
