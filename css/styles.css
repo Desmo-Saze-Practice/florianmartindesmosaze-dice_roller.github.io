@@ -11,7 +11,7 @@ body {
 }
 
 #dealer {
-  background-color: #22e6b5;
+  background-color: #e67e22;
 }
 
 .board {
@@ -29,5 +29,5 @@ body {
   width: 100px;
   height: 100px;
   margin: 1em;
-  background-position-x: 0px;
+  background-position-x: -100px;
 }
