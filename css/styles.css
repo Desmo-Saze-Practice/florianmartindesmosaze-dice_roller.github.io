@@ -8,12 +8,17 @@ body {
   display: flex;
 }
 
+.split {
+  width: 1px;
+  background-color: black;
+}
+
 #player {
-  background-color: ##222222;
+  background-color: #222222;
 }
 
 #dealer {
-  background-color: ##222222;
+  background-color: #222222;
 }
 
 .board {
@@ -24,6 +29,7 @@ body {
   align-items: center;
   justify-content: center;
   align-content: center;
+  padding: 2%;
 }
 
 .dice {
@@ -48,6 +54,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 10vh;
+  border-bottom: black solid 1px;
 }
 
 #label-dice {
